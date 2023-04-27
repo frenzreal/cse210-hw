@@ -17,9 +17,32 @@ class Program
             }
 
         }
-        Console.WriteLine($"The sum is: {numbers.Sum()}");
-        Console.WriteLine($"The average is: {numbers.Average()}");
-        Console.WriteLine($"The largest number is: {numbers.Max()}");
+        // Console.WriteLine($"The sum is: {numbers.Sum()}");
+        // Console.WriteLine($"The average is: {numbers.Average()}");
+        // Console.WriteLine($"The largest number is: {numbers.Max()}");
+
+        // Computing for the Sum
+        int sum = 0;
+        foreach (int number in numbers) 
+        {
+            sum += number;
+        }
+        Console.WriteLine($"The sum is: {sum}");
+
+        // Computing the average
+        float average = ((float)sum) / numbers.Count;
+        Console.WriteLine($"The average is: {average}");
+
+        // Finding the largest number
+        int max = numbers[0];
+        foreach (int number in numbers)
+        {
+            if (number > max)
+            {
+                max = number;
+            }
+        }
+        Console.WriteLine($"The largest number is: {max}");
 
     }
 }
